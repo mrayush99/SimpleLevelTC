@@ -61,7 +61,7 @@ public class TC_loginTest {
 	}
 	@Test
 	public void validLoginTest() {
-		
+		//this function is to login into the admin workspace
 		
 		loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
@@ -72,11 +72,14 @@ public class TC_loginTest {
 		
 		//screenShot.captureScreenShot("First");
 	}
+	
+	//this function is to validate the elements present in cateogories link
 	@Test(dependsOnMethods = {"validLoginTest"})
 	public void validateCateogories() throws InterruptedException {
+		//this function will click on catalog option
 		loginPOM.clickcatalog();
 		Thread.sleep(3000);
-			
+		//this will select and click categories link from the menu
 		loginPOM.clickcateogories();
 		Thread.sleep(3000);
 		
